@@ -21,6 +21,7 @@ public class MainTest {
         return conn;
     }
 
+
     public void endConnection(Connection conn) throws SQLException {
         Statement stmt = conn.createStatement();
         stmt.execute("DROP TABLE events");
@@ -32,6 +33,7 @@ public class MainTest {
         Connection conn = startConnection();
         Main.insertEvent(conn, "THIS IS A DESCRIPTION!", LocalDateTime.now());
         ArrayList<Event> events = Main.selectEvents(conn);
+
         endConnection(conn);
         assertTrue(events.size() == 1);
     }

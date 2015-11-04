@@ -6,6 +6,15 @@
     <button type="submit">submit</button>
 </form>
 <br><br>
+{{#isAsc}}
+<a href="/?isAsc=false">Show in descending order</a>
+{{/isAsc}}
+
+{{^isAsc}}
+<a href="/?isAsc=true">Show in ascending order</a>
+{{/isAsc}}
+<br><br>
+
 {{#events}}
 {{description}}  {{startDate}} <br>
 {{/events}}
