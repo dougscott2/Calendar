@@ -28,6 +28,7 @@ public class MainTest {
         conn.close();
     }
 
+
     @Test
     public void testEvents() throws SQLException {
         Connection conn = startConnection();
